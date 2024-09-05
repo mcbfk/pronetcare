@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1 {
+    font-family: "Kanit";
+}
+
+.roboto {
+    font-family: "Roboto";
+}
+
+.sectionTitle {
+    font-family: "Kanit";
+    text-align: center;
+    margin-bottom: 40px;
+}
+    
+.animated-separator {
+    height: 4px;
+    background: linear-gradient(to bottom, #dcdcdc, #ffffff, #dcdcdc, #000000b6);
+    background-size: 100% 400%;
+    border-radius: 5px;
+    animation: gradientVerticalAnimation 3s ease infinite;
+}
+
+/* Animação Vertical do Gradiente */
+@keyframes gradientVerticalAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    25% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    75% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+/* ========================================================================
+   ============================= Navbar ============================
+   ======================================================================== */
+
+.navbar {
+    padding: 10px 30px;
+}
+
+.navbar-brand {
+    font-family: "Kanit";
+    font-size: 40px;
+    color: #000;
+}
+
+.navbar-brand:hover {
+    color: #000;
+}
+
+.navbar-toggler {
+    border: none;
+    transition: 0.2s ease-in;
+}
+
+.navbar-toggler:hover {
+    transform: scale(1.1);
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+.navbar-collapse {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link {
+    font-family: "Kanit";
+    font-size: 20px;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    margin-left: 20px;
+    padding-bottom: 5px;
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::before {
+    transform: translateX(0);
+}
+
+.menuButton {
+    width: 50px;
+}
+
+/* ========================================================================
+   ============================= Home ============================
+   ======================================================================== */
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    height: 70vh;
+    background: linear-gradient(145deg,#FFF, #00000056, #000000a1);
+}
+
+.buttonContato {
+    font-family: "Kanit";
+    font-size: 20px;
+    padding: 20px;
+    border: 2px solid #363636	;
+    border-radius: 5px;
+    margin-top: 40px;
+    transition: 0.2s ease-out;
+} 
+
+.buttonContato:hover {
+    transform: scale(1.05);
+}
+
+/* ========================================================================
+   ============================= Serviços ============================
+   ======================================================================== */
+
+
+.card {
+    position: relative;
+    height: 350px;
+    margin-bottom: 20px;
+    transition: 1s ease-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card-text {
+    margin-top: 50px;
+}
+
+.card button {
+    position: absolute;
+    transform: translateX(-50%);
+    bottom: 40px;
+    font-family: "Kanit";
+    padding: 10px 20px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+/* ========================================================================
+   ============================= Sobre ============================
+   ======================================================================== */
+
+
+#sobre p {
+    text-align: justify;
+}
+
+/* ========================================================================
+   ============================= Contato ============================
+   ======================================================================== */
+
+
+#contato {
+    border-radius: 10px;
+    background-color: #F0F0F0;
+    padding: 50px 0;
+    margin-bottom: 30px;
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contato p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.contact-form h3 {
+    font-family: "Roboto";
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-form .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    margin-bottom: 15px;
+}
+
+.contact-form .btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.contact-info {
+    padding: 20px;
+}
+
+.contact-info h3 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-methods {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    word-break: break-all;
+}
+
+.contact-icon {
+    width: 54px;
+    height: 54px;
+    margin-right: 10px;
+}
+
+.contact-link {
+    color: #363636;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.contact-link:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.contact-text {
+    font-size: 1.2rem;
+}
+
+.contact-form button {
+    font-family: "Kanit";
+    padding: 10px 20px;
+    background-color: #F0F0F0;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+/* ========================================================================
+   ============================= Footer ============================
+   ======================================================================== */
+
+footer .sectionTitle {
+    margin-bottom: 10px;
+}
+
+/* ========================================================================
+   ============================= MediaScreen ============================
+   ======================================================================== */
+
+
+@media screen and (max-width: 1024px) {
+
+    .navbar-collapse {
+        position: relative;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .card button {
+        position: relative;
+        transform: none;
+        bottom: auto;
+    }
+}
